@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador Oracle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="encriptador">
-        <button id="bttn-E" >Encriptar</button>32 
-        <button id="bttn-D">Desencriptar</button>
+
+    <div class="logo">
+        <img src="img/Logo.png" alt="alura">
     </div>
+
+    <div class="entrada">
+        <div class="input-t">
+            <textarea class="text">Ingrese el texto aqui . . .</textarea>
+        </div>
+
+        <div class="condicion">
+            <label for="condicion">
+                <p><img src="img/!.png" alt="!">  Solo letras minúsculas y sin acentos </p>
+            </label>
+        </div>
+        
+        <div class="bttn">
+            <button id="bttn-E">Encriptar</button>
+            <button id="bttn-D">Desencriptar</button>
+        </div>
+
+    </div>
+
+    <div class="salida">
+        <img src="img/Muñeco.png" alt="Duibujo">
+        <div class="text-s">
+            <h2>Ningún mensaje fue <br> encontrado</h2>
+            <p>Ingresa el texto que desees encriptar o desencriptar</p>
+        </div>
+        <br>
+        <button id="bttn-C">Copiar</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

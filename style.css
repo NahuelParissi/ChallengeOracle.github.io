@@ -1,8 +1,144 @@
 /* Colors by figma
+Fondo: E5E5E5
  0A3871 blue */
 
-
-#boxText{
-    width: 400px;
-    height: 400px;
+*{
+    font-family: "Inter";
 }
+
+body{
+    background-color: #E5E5E5;
+    padding: 15px;
+    margin: 15px;
+    display: flex;
+} 
+
+.logo{
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+
+.entrada{
+    display: flex;
+    flex-basis: 60%;
+    height: 800px;
+    padding: 30px;
+    border-color: #0A3871;
+    border-width: 1px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-t{
+    width: 95%;
+    margin: 30px 0;
+    position: relative;
+}
+
+.text{
+    resize: none;
+    color: #0A3871;
+    font-size: 20px;
+    width: 100%;
+    height: 500px;
+    padding: 24px;
+    border: 0;
+    outline: 0;
+    background-color: #E5E5E5;
+    cursor: text;
+}
+
+.condicion{
+    justify-content: flex-start;
+}
+
+.bttn{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    gap: 24px;
+}
+
+#bttn-E{
+    width: 330px;
+    height: 72px;
+    color: #fff;
+    background-color: #0A3871;
+    padding: 24px;
+    margin: 30px;
+    border-radius: 24px;
+    border-style: none;
+    font-size: 20px;
+    gap: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#bttn-D{
+    width: 330px;
+    height: 72px;
+    color: #0A3871;
+    background-color: #D8DFE8;
+    padding: 24px;
+    margin: 30px;
+    border-radius: 24px;
+    border-color: #0A3871;
+    border-width: 1px;
+    font-size: 20px;
+    gap: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.salida{
+    flex-basis: 40%;
+    display: flex;
+    height: 800px;
+    width: 400px;
+    border-radius: 32px;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: end;
+    background-color: #fff;
+    border-color: #0A3871;
+    border-width: 1px;
+}
+
+.salida img{
+    align-self: center;
+    height: 305px;
+    width: 330px;
+    margin-bottom: 30px;
+}
+
+.text-s{
+    width: 330px;
+    height: 120px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.text-s h2,.text-s p{
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    margin: 5px 0px 0px;
+
+}
+
+#bttn-C{
+    align-self: center;
+    width: 330px;
+    color: #fff;
+    background-color: #0A3871;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 24px;
+    border-radius: 24px;
+    border-style: none;
+    font-size: 20px;
+    gap: 8px;
+    margin: 30px;
+
+}
+
