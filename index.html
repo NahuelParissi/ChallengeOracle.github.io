@@ -22,9 +22,10 @@
 
         <div class="contenedor">
             <form action="">
+                
                 <div class="selectbox">
                     <div class="select" id="select">
-                        <h1 class="titulo">Cambiar <br> Idioma</h1>
+                        <h1 class="contenido-select">Cambiar <br> Idioma</h1>
                     </div>
     
                     <div class="opciones" id="opciones">
@@ -49,6 +50,7 @@
                 <input type="hidden" name="pais" id="inputSelect" value="">
             </form>
         </div>
+
     </nav>
 
     <div class="row">
@@ -65,20 +67,26 @@
             </div>
             
             <div class="bttn">
-                <button id="bttn-E">Encriptar</button>
+                <button id="bttn-E" onclick="encriptar()">Encriptar</button>
                 <button id="bttn-D">Desencriptar</button>
             </div>
         </section>
 
         <section class="salida" id="salida">
-            <button id="bttn-C">Copiar</button>
-            <img src="img/Muñeco.png" alt="Dibujo">
-            <div class="text-s">
-                <h2 class="p">Ningún mensaje fue <br> encontrado</h2>
-                <p class="p">Ingresa el texto que desees encriptar o desencriptar</p>
+
+            <div class="n-text" id="n-text">
+                <img src="img/Muñeco.png" alt="Dibujo">
+                <div class="text-s">
+                    <h2 class="p">Ningún mensaje fue <br> encontrado</h2>
+                    <p class="p">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
             </div>
-            <br>
-            <!-- <button id="bttn-C">Copiar</button> -->
+
+            <div class="c-text" id="c-text">
+                <p id="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione vero expedita nobis id, blanditiis, porro mollitia officia distinctio facilis hic perferendis libero possimus dolores alias enim. Reprehenderit soluta id qui!</p>
+                <button id="bttn-C"><img src="img/copy-b.ico" alt="copy.ico" id="bttn-C-img"></button>
+            </div>
+
         </section>
     </div>
 
