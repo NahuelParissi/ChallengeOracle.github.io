@@ -181,7 +181,7 @@ input{
     display: flex;
     flex-basis: 70%;
     height: 800px;
-    padding: 0px 30px;
+    padding: 15px;
     border-color: #0A3871;
     border-width: 1px;
     flex-direction: column;
@@ -190,13 +190,12 @@ input{
 
 .input-t{
     width: 95%;
-    margin: 30px 0;
     position: relative;
 }
 
-.text{
+.text-input{
     resize: none;
-    color: #0A3871;
+    color: black;
     font-size: 20px;
     width: 100%;
     height: 500px;
@@ -207,7 +206,19 @@ input{
 }
 
 .condicion{
+    height: 60px;
+    display: flex;
     justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.condicion img{
+    margin-right: 7px;
+}
+
+.condicion .p{
+    font-size: 17px;
+    margin: 0;
 }
 
 .bttn{
@@ -250,7 +261,7 @@ input{
     display: flex;
     height: 800px;
     width: 400px;
-    border-radius: 32px;
+    border-radius: 20px;
     padding: 15px;
     flex-direction: column;
     justify-content: space-evenly;
@@ -293,16 +304,17 @@ input{
     gap: 50px;
 }
 
-#text{
-    height: 620px;
+#text-out{
+    color: black;
+    font-size: large;
+    height: 650px;
+    margin: 0px 20px
 }
 
 #bttn-C{
     align-self: flex-end;
-    background: #fff;
+    background: none;
     border-style: none;
-    height: 50px;
-    width: 50px;
 }
 
 #bttn-C-img{

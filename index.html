@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oracle</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
@@ -31,17 +32,17 @@
                     <div class="opciones" id="opciones">
                         <a href="#" class="opcion">
                             <div class="contenido-opcion">
-                                <img src="img/arg.png" alt="">
+                                <img src="img/arg.png" alt="es" id="es">
                             </div>
                         </a>
                         <a href="#" class="opcion">
                             <div class="contenido-opcion">
-                                <img src="img/usa.png" alt="">
+                                <img src="img/usa.png" alt="en" id="en">
                             </div>
                         </a>
                         <a href="#" class="opcion">
                             <div class="contenido-opcion">
-                                <img src="img/bra.png" alt="">
+                                <img src="img/bra.png" alt="br" id="br">
                             </div>
                         </a>
                     </div>
@@ -57,17 +58,18 @@
 
         <section class="entrada" id="entrada">
             <div class="input-t">
-                <textarea class="text" placeholder="Ingrese el texto aqui . . ."></textarea>
+                <textarea class="text-input" placeholder="Ingrese el texto aqui . . ."></textarea>
             </div>
     
-            <div class="condicion">
-                <label for="condicion">
-                    <p class="p"><img src="img/!.png" alt="!">  Solo letras minúsculas y sin acentos </p>
+            <div>
+                <label class="condicion" for="condicion">
+                    <img src="img/!.png" alt="!" id="img1">
+                    <p class="p">Solo letras minúsculas y sin acentos </p>
                 </label>
             </div>
             
             <div class="bttn">
-                <button id="bttn-E" onclick="encriptar()">Encriptar</button>
+                <button id="bttn-E" onclick="alternar()">Encriptar</button>
                 <button id="bttn-D">Desencriptar</button>
             </div>
         </section>
@@ -83,8 +85,8 @@
             </div>
 
             <div class="c-text" id="c-text">
-                <p id="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione vero expedita nobis id, blanditiis, porro mollitia officia distinctio facilis hic perferendis libero possimus dolores alias enim. Reprehenderit soluta id qui!</p>
-                <button id="bttn-C"><img src="img/copy-b.ico" alt="copy.ico" id="bttn-C-img"></button>
+                <p id="text-out"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione vero expedita nobis id, blanditiis, porro mollitia officia distinctio facilis hic perferendis libero possimus dolores alias enim. Reprehenderit soluta id qui!</p>
+                <button id="bttn-C" onclick="copiarTexto()"><img src="img/copy-b.ico" alt="copy.ico" id="bttn-C-img"></button>
             </div>
 
         </section>
