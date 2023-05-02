@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oracle</title>
-    
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <nav class="nav" id="nav">
         <img src="img/LogoA.png" alt="logo">
 
@@ -23,12 +25,12 @@
 
         <div class="contenedor">
             <form action="">
-                
+
                 <div class="selectbox">
                     <div class="select" id="select">
                         <h1 class="contenido-select">Cambiar <br> Idioma</h1>
                     </div>
-    
+
                     <div class="opciones" id="opciones">
                         <a href="#" class="opcion">
                             <div class="contenido-opcion">
@@ -47,7 +49,7 @@
                         </a>
                     </div>
                 </div>
-    
+
                 <input type="hidden" name="pais" id="inputSelect" value="">
             </form>
         </div>
@@ -58,35 +60,28 @@
 
         <section class="entrada" id="entrada">
             <div class="input-t">
-                <textarea class="text-input" placeholder="Ingrese el texto aqui . . ."></textarea>
+                <textarea class="text-input" id="textOriginal" placeholder="Ingrese el texto aqui . . ."></textarea>
             </div>
-    
+
             <div>
                 <label class="condicion" for="condicion">
                     <img src="img/!.png" alt="!" id="img1">
                     <p class="p">Solo letras minúsculas y sin acentos </p>
                 </label>
             </div>
-            
+
             <div class="bttn">
-                <button id="bttn-E" onclick="alternar()">Encriptar</button>
-                <button id="bttn-D">Desencriptar</button>
+                <button id="bttn-E" onclick="encrypt()">Encriptar</button>
+                <button id="bttn-D" onclick="decrypt()">Desencriptar</button>
             </div>
         </section>
 
         <section class="salida" id="salida">
 
-            <div class="n-text" id="n-text">
-                <img src="img/Muñeco.png" alt="Dibujo">
-                <div class="text-s">
-                    <h2 class="p">Ningún mensaje fue <br> encontrado</h2>
-                    <p class="p">Ingresa el texto que desees encriptar o desencriptar</p>
-                </div>
-            </div>
-
             <div class="c-text" id="c-text">
-                <p id="text-out"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione vero expedita nobis id, blanditiis, porro mollitia officia distinctio facilis hic perferendis libero possimus dolores alias enim. Reprehenderit soluta id qui!</p>
-                <button id="bttn-C" onclick="copiarTexto()"><img src="img/copy-b.ico" alt="copy.ico" id="bttn-C-img"></button>
+                <textarea id="textEncripted" placeholder="Ningun mensaje fue encontrado..."></textarea>
+                <img src="img/Muñeco.png" alt="Dibujo" id="imagen">
+                <button id="bttn-C" onclick="copiarTexto()"><img src="img/copy.png" alt="copy.ico" id="bttn-C-img"></button>
             </div>
 
         </section>
@@ -94,4 +89,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -194,6 +194,7 @@ input{
 }
 
 .text-input{
+    display: flex;
     resize: none;
     color: black;
     font-size: 20px;
@@ -270,45 +271,29 @@ input{
     border-width: 1px;
 }
 
-.n-text{
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    gap: 50px;
-}
-
-.salida .n-text img{
-    height: 305px;
-    width: 330px;
-}
-
-.text-s{
-    width: 330px;
-    height: 120px;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-.text-s h2,.text-s p{
-    font-family: 'Inter', sans-serif;
-    text-align: center;
-    margin: 10px 0px 0px;
-}
-
 .c-text{
-    display: none;
+    display: flex;
     flex-direction: column;
-    gap: 50px;
+    justify-content: space-around ;
+    gap: 100px;
 }
 
-#text-out{
+#imagen{
+    display: flex;
+    height: 336px;
+    width: 400px;
+    align-self: center;
+}
+
+#textEncripted{
+    font-family: 'Inter', sans-serif;
+    background: none;
     color: black;
     font-size: large;
-    height: 650px;
-    margin: 0px 20px
+    height: 50px;
+    margin: 0px 20px;
+    border: none;
+    pointer-events: none;
 }
 
 #bttn-C{
@@ -329,3 +314,4 @@ input{
     }
     
 }
+
