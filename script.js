@@ -67,23 +67,31 @@ document.getElementById("dark-mode").addEventListener("change", function () {
 });
 
 // Encript/Decrypt
-// Objeto que contiene las correspondencias entre las letras y sus valores encriptados
-const encryptionKey = {
-	"e": "enter",
-	"i": "imes",
-	"a": "ai",
-	"o": "ober",
-	"u": "ufat"
-};
 
 function encrypt() {
-	const originalText = document.getElementById("textOriginal").value;
-	let encryptedText = "";
-	for (let i = 0; i < originalText.length; i++) {
-		const letter = originalText[i];
-		encryptedText += encryptionKey[letter] || letter;
-	}
-	document.getElementById("textEncripted").value = encryptedText;
+	const originalText = document.getElementById('textOriginal').value;
+	let encryptedText = originalText;
+
+	encryptedText = encryptedText.replace(/e/g, 'enter');
+	encryptedText = encryptedText.replace(/i/g, 'imes');
+	encryptedText = encryptedText.replace(/a/g, 'ai');
+	encryptedText = encryptedText.replace(/o/g, 'ober');
+	encryptedText = encryptedText.replace(/u/g, 'ufat');
+
+	document.getElementById('textEncripted').value = encryptedText;
+}
+
+function decrypt() {
+	const encryptedText = document.getElementById('textOriginal').value;
+	let decryptedText = encryptedText;
+
+	decryptedText = decryptedText.replace(/enter/g, 'e');
+	decryptedText = decryptedText.replace(/imes/g, 'i');
+	decryptedText = decryptedText.replace(/ai/g, 'a');
+	decryptedText = decryptedText.replace(/ober/g, 'o');
+	decryptedText = decryptedText.replace(/ufat/g, 'u');
+
+	document.getElementById('textEncripted').value = decryptedText;
 }
 
 const imagen = document.getElementById("imagen");
@@ -94,23 +102,6 @@ encryptButton.addEventListener("click", function () {
 	imagen.style.display = "none";
 	text.style.height = "550px";
 });
-
-
-
-function decrypt() {
-	const encryptedText = document.getElementById("textOriginal").value;
-	let originalText = "";
-	for (let i = 0; i < encryptedText.length; i++) {
-		const letter = encryptedText.slice(i, i + 5);
-		if (encryptionKey[letter]) {
-			originalText += Object.keys(encryptionKey).find(key => encryptionKey[key] === letter);
-			i += 4;
-		} else {
-			originalText += encryptedText[i];
-		}
-	}
-	document.getElementById("textEncripted").value = encryptedText;
-}
 
 
 //boton copiar//
