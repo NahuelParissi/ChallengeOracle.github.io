@@ -282,7 +282,7 @@ input{
     color: black;
     font-size: large;
     height: 50px;
-    margin: 0px 20px;
+    margin: 20px 20px;
     border: none;
     pointer-events: none;
 }
@@ -313,6 +313,9 @@ input{
       order: 3;
       width: 90%;
       align-items: center;
+    }
+    .c-text{
+        gap: 10px;
     }
 
     #bttn-C{
