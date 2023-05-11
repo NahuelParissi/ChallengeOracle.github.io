@@ -1,6 +1,3 @@
-*{
-    box-sizing: border-box;
-}
 
 body{
     background-color: #E5E5E5;
@@ -163,15 +160,9 @@ input{
 	color: #fff;
 }
 
-@media screen and (max-width: 800px){
-	.selectbox {
-		width: 100%;
-	}
-}
-
 .row{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     height: auto;
     align-items: stretch;
     margin-top: 20px;
@@ -179,7 +170,7 @@ input{
 
 .entrada{
     display: flex;
-    flex-basis: 70%;
+    flex-basis: 65%;
     height: 800px;
     padding: 15px;
     border-color: #0A3871;
@@ -257,8 +248,8 @@ input{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#salida{
-    flex-basis: 30%;
+.salida{
+    flex-basis: 35%;
     display: flex;
     height: 800px;
     width: 400px;
@@ -307,11 +298,31 @@ input{
     width: 50px;
 }
 
-@media screen and (max-width:700px){
-
-    .nav, .row{
-        flex-direction: column;
+@media screen and (max-width: 770px) {
+    .row {
+      flex-direction: column;
+      display: flex;
     }
-    
-}
+  
+    .entrada {
+      order: 1;
+      width: 90%;
+    }
+  
+    .salida {
+      order: 3;
+      width: 90%;
+      align-items: center;
+    }
 
+    #bttn-C{
+        align-self: center;
+    }
+  
+    .bttn {
+      order: 2;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  

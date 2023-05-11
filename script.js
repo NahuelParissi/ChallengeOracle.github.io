@@ -4,30 +4,48 @@ const select = document.querySelector('#select');
 const opciones = document.querySelector('#opciones');
 const contenidoSelect = document.querySelector('#select .contenido-select');
 const hiddenInput = document.querySelector('#inputSelect');
+const textoP = document.querySelector('.p');
+const textarea = document.querySelector('.text-input');
+const textarea1 = document.getElementById('textEncripted');
+const bttnEncrypt = document.getElementById('bttn-E');
+const bttnDecrypt = document.getElementById('bttn-D');
 
 document.querySelectorAll('#opciones > .opcion').forEach((opcion) => {
-	opcion.addEventListener('click', (e) => {
-		e.preventDefault();
-		contenidoSelect.innerHTML = e.currentTarget.innerHTML;
-		select.classList.toggle('active');
-		opciones.classList.toggle('active');
-		hiddenInput.value = e.currentTarget.querySelector('.contenido-opcion').innerText;
-	});
+    opcion.addEventListener('click', (e) => {
+        e.preventDefault();
+        contenidoSelect.innerHTML = e.currentTarget.innerHTML;
+        select.classList.toggle('active');
+        opciones.classList.toggle('active');
+        hiddenInput.value = e.currentTarget.querySelector('.contenido-opcion').innerText;
+        // Obtener el valor de la opción seleccionada
+        var opcionSeleccionada = e.currentTarget.querySelector('.contenido-opcion img').getAttribute("alt");
+        // Actualizar el texto
+        if (opcionSeleccionada === "es") {
+            textoP.textContent = "Solo letras minúsculas y sin acentos";
+            textarea.placeholder = "Ingrese el texto aquí...";
+			textarea1.placeholder = "Ningun mensaje fue encontrado ... ";
+            bttnEncrypt.textContent = "Encriptar";
+            bttnDecrypt.textContent = "Desencriptar";
+        } else if (opcionSeleccionada === "en") {
+            textoP.textContent = "Lowercase letters only, no accents";
+            textarea.placeholder = "Enter text here...";
+			textarea1.placeholder = "No message found...";
+            bttnEncrypt.textContent = "Encrypt";
+            bttnDecrypt.textContent = "Decrypt";
+        } else if (opcionSeleccionada === "br") {
+            textoP.textContent = "Apenas letras minúsculas, sem acentos";
+            textarea.placeholder = "Digite o texto aqui...";
+			textarea1.placeholder = "Nenhuma mensagem encontrada...";
+            bttnEncrypt.textContent = "Criptografar";
+            bttnDecrypt.textContent = "Descriptografar";
+        }
+    });
 });
 
 select.addEventListener('click', () => {
-	select.classList.toggle('active');
-	opciones.classList.toggle('active');
+    select.classList.toggle('active');
+    opciones.classList.toggle('active');
 });
-
-//function//
-
-const br = document.querySelector("#br")
-const es = document.querySelector("#es")
-const en = document.querySelector("#en")
-
-
-
 
 
 //DarkMode//
